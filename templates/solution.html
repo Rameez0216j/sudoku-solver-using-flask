@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% block title %}
+<title>Solution</title>
+{% endblock title %}
+{% block body %}
+    <div class="container">
+        <div class="main_panel">
+            <div class="heading">
+                <div>Solution</div>
+            </div>
+            <div class="sudoku_box">
+                <form action="{{ url_for('solve') }}" method="post">
+                    <div class="solving_panel">
+                        <div class="output_area">
+                            {% for i in range(9) %}
+                                <div class="columns">
+                                    {% for j in range(9) %}
+                                    <div class="output">{% if solution[i][j]==user_data[i][j] %}
+                                                        <b>{{solution[i][j]}}</b>
+                                                        {% else %}
+                                                            <span class="low_visibility">{{solution[i][j]}}</span>
+                                                        {% endif %}
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="submit">
+                            <a href="/">Back to Entry</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

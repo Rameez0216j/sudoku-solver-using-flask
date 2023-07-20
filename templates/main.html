@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/Css/main.css">
+
+        {% block error_css %}
+		{% endblock error_css %}
+
+
+        {% block title %}
+		{% endblock title %}
+    </head>
+
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+                <img class="project_logo" src="../static/Images/pngwing.com (1).png" alt="logo">
+				<a class="navbar-brand project_name" id="Master_title" href="#">Sudoku Solver</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					  aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				</div>
+			</div>
+		</nav>
+
+
+		{% block body %}
+        {% endblock body %}
+
+
+        <footer class="footer_content">
+			Copyrights &#169; rameezahmad20131a4245@gmail.com | All rights reserved.
+		</footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

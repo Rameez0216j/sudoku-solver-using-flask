@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block title %}
+<title>Sudoku solver</title>
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <div class="main_panel">
+        <div class="heading">
+            <div>Sudoku Solver</div>
+        </div>
+        <div class="sudoku_box">
+            <form action="{{ url_for('solve') }}" method="post">
+                <div class="solving_panel">
+                    <div class="input_area">
+                        {% for i in range(9) %}
+                            <div class="columns">
+                                {% for j in range(9) %}
+                                <input class="cells" name="a{{i}}{{j}}" type="number" min="0" max="9" placeholder="_"   default=0 >
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="submit">
+                        <button type="submit">
+                            SOLVE
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

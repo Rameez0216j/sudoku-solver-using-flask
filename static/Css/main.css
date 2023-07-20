@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Kalam&family=Poor+Story&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to right,#134E5E,#71B280);
+}
+#Master_title{
+    font-family: 'Poor Story', cursive;
+}
+
+.project_logo{
+	height: 45px;
+	margin-right: 5px;
+}
+
+.main_panel{
+    position: absolute;
+    min-height: 600px;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.heading{
+    /* position: absolute; */
+    height: 100px;
+    width: 400px;
+    /* top: 20%; */
+}
+.sudoku_box{
+    /* position: absolute; */
+    
+    height: 400px;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    /* transition: all 0.5s ease; */
+}
+.input_area{
+    height: 400px;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 1s ease;
+    padding: 10px;
+}
+.input_area:hover{
+    /* background-image: linear-gradient(to right bottom,#005AA7,#c0d32dc4); */
+    background: black;
+    box-shadow: 0px 20px 35px rgb(66, 61, 61);
+}
+.output_area{
+    height: 400px;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.columns{
+    display: flex;
+    margin-top: calc(20px/8);
+    height: calc((100% - 20px)/9);
+    width: 100%;
+    justify-content: space-between;
+}
+.sudoku_box form :nth-child(1){
+    margin-top: 0px;
+}
+
+.cells{
+    width: calc((100% - 40px)/ 9);
+    height: 100%;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 0px;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+}
+
+.output{
+    width: 40px;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    border: 0px;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    color: black;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.solving_panel{
+    width: 100%;
+    height: auto;
+}
+.submit{
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+.submit button{
+    padding: 10px 20px;
+    width: 120px;
+    font-size: medium;
+    border: 0px solid black;
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: 'Fuzzy Bubbles', cursive;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit a{
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    width: 200px;
+    font-size: medium;
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: 'Fuzzy Bubbles', cursive;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit button:hover,.submit a:hover{
+    color: white;
+    background-color: crimson;
+}
+.heading{
+    top: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:linear-gradient(to right bottom,#c31432,#632141);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 15px 10px rgb(57, 49, 49);
+    /* color:linear-gradient(to right,#c31432,#240b36); */
+}
+.heading div{
+    font-size: 50px;
+    font-family: 'Kalam', cursive;
+}
+
+/* To hide type number arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Input field modification */
+input[type="number"]{
+    transition: all 0.5s ease;
+}
+input[type="number"]::placeholder{
+    opacity: 0.5;
+}
+input[type="number"]:focus{
+    outline: 0px; /* important for removing default border */
+    border-radius: 0px;
+    border: 3px solid;
+    border-color: dodgerblue;
+    box-shadow: 0px 0px 10px dodgerblue;
+}
+
+.low_visibility{
+    opacity: 0.3;
+}
+
+/* footer section */
+.footer_content{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	font-size: small;
+    margin-top: auto;
+}
+/* footer section end */

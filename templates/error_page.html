@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block title %}
+<title>Error</title>
+{% endblock title %}
+
+
+{% block error_css %}
+<link rel="stylesheet" href="../static/Css/error.css">
+{% endblock error_css %}
+
+
+{% block body %}
+    <div class="container-fluid">
+        <section class="page_404">
+            <div class="row">
+                <div class="col-12">
+                    <div class="col-sm-12 text-center">
+                        <div class="four_zero_four_bg">
+                            <h1 class="text-center ">404</h1>
+                        </div>
+                        <div class="contant_box_404">
+                            <h3 class="h2">
+                                Look like you've given wrong input
+                            </h3>
+                            <p>Sudoku Provided is not Valid!</p>
+                            <a href="/" class="link_404">Go to Input page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock body %}
