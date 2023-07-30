@@ -1,0 +1,23 @@
+name: Run Sudoku Solver
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_sudoku_solver:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker
+        uses: docker/setup-docker@v1
+
+      - name: Pull Docker image
+        run: docker pull code2buzz/sudoku-solver
+
+      - name: Run Docker container
+        run: docker run -d -p 5001:5001 code2buzz/sudoku-solver
